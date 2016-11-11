@@ -1,0 +1,58 @@
+{
+  "name": "javascript-starter-kit",
+  "version": "1.0.0",
+  "description": "A JavaScript Development Environment (Starter Kit).",
+  "main": "index.js",
+  "scripts": {
+		"prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "babel-node buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3000",
+    "share": "npm-run-all --parallel open:src localtunnel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viveksrao/javascript-starter-kit.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Development",
+    "Environment"
+  ],
+  "author": "Vivekanand Rao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viveksrao/javascript-starter-kit/issues"
+  },
+  "homepage": "https://github.com/viveksrao/javascript-starter-kit#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "chalk": "^1.1.3",
+    "cheerio": "^0.22.0",
+    "cross-env": "^3.1.3",
+    "eslint": "^3.9.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-watch": "^2.1.14",
+    "express": "^4.14.0",
+    "html-webpack-plugin": "^2.24.1",
+    "jsdom": "^9.8.3",
+    "localtunnel": "^1.8.1",
+    "mocha": "^3.1.2",
+    "nock": "^9.0.2",
+    "npm-run-all": "^3.1.1",
+    "nsp": "^2.6.2",
+    "numeral": "^1.5.3",
+    "open": "0.0.5",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2",
+    "webpack-md5-hash": "0.0.5"
+  }
+}
